@@ -21,7 +21,6 @@ namespace madu
             this.sym = sym;
         }
 
-
         public Point CreateFood(Figure figure)
         {
             Point food;
@@ -30,13 +29,12 @@ namespace madu
                 int x = random.Next(2, mapWidth - 3);
                 int y = random.Next(2, mapHeight - 3);
                 food = new Point(x, y, sym);
+
             }
-            while (figure.IsHit(food)); // Здесь будет использоваться перегрузка IsHit для Figure
+            while (figure.IsHit(food)); // Проверяем, не появляется ли еда внутри змейки
 
             return food;
         }
-
-
     }
 
 }

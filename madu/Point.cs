@@ -52,7 +52,7 @@ namespace madu
             }
         }
 
-                public void Draw()
+                public virtual void Draw()
                 {
 
 
